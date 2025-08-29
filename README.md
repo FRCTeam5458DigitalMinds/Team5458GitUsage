@@ -59,7 +59,7 @@ ssh-keyscan github.com >> ~/.ssh/known_hosts
 ### Initalize Git for New Local Project
 ```bash
 # Navigate to New Local Project Folder
-cd {project_path}
+cd {project_folder_path}
 
 # Initialize Git
 git init
@@ -69,11 +69,14 @@ git remote add origin git@github-{project_name}:FRCTeam5458DigitalMinds/{repo_na
 ```
 ### Stage and Push to GitHub
 ```bash
+# Navigate to Local Project Folder
+cd {project_folder_path}
+
 # Stage Changes 
 git add --all
 
 # Commit Changes
-git commit -m '{commit comment}' 
+git commit -m '{commit_comment}' 
 
 # View Remote Name (Default should be 'origin')
 git remote -v
