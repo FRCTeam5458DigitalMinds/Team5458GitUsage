@@ -44,7 +44,10 @@ vim ~/.ssh/config
 chmod 600 ~/.ssh/config
 ```
 ### Add Public Key to Repo
-Github Repo -> Settings -> Deploy keys -> Add Deploy key
+An Admin of our GitHub organization will have to complete this step. Currently, only mentors are admins. 
+
+**Github Repo -> Settings -> Deploy keys -> Add Deploy key**
+
 ```bash
 cat ~/.ssh/{project_name}.pub
 ```
@@ -53,7 +56,7 @@ cat ~/.ssh/{project_name}.pub
 ssh-keyscan github.com >> ~/.ssh/known_hosts
 # Only Run from SSH Enabled Network
 ```
-### Initalize Git on New Local Project
+### Initalize Git for New Local Project
 ```bash
 # Navigate to New Local Project Folder
 cd {project_path}
@@ -63,14 +66,6 @@ git init
 
 # Add Remote Repo
 git remote add origin git@github-{project_name}:FRCTeam5458DigitalMinds/{repo_name}.git
-```
-### Clone Repo
-```bash
-# Clone Repo If Not
-git clone git@github-{project_name}:FRCTeam5458DigitalMinds/{repo_name}.git
-
-# Move Into Repo Directory
-cd {repo_name}
 ```
 ### Stage and Push to GitHub
 ```bash
@@ -86,4 +81,10 @@ git remote -v
 # Push to Github
 git push origin --all
 ```
+### Clone Repo
+```bash
+# Clone Repo From Code Already in GitHub
+git clone git@github-{project_name}:FRCTeam5458DigitalMinds/{repo_name}.git
+```
+
 
